@@ -8,7 +8,7 @@
     
         } */
 
-    const { meta, funnel } = Astro.props;
+    const { meta, company } = Astro.props;
 
     const title = meta?.title ?? 'Default Title';
     const description = meta?.description ?? 'Default Description';
@@ -29,13 +29,13 @@
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content="trybioluna.com" />
-        <meta property="og:site_name" content={funnel.company.name + ", LLC" } />
+        <meta property="og:site_name" content={company.name + ", LLC" } />
 
-        <link rel="icon" href={funnel.company.favicon} sizes="32x32" />
+        <link rel="icon" href={company.favicon.src} sizes="32x32" />
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        <meta name="author" content={funnel.company.name} />
+        <meta name="author" content={company.name} />
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
