@@ -149,6 +149,16 @@ ol {
 	padding-bottom: 70px;
 }
 
+.spad-3 {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.spad-4 {
+	padding-top: 70px;
+	padding-bottom: 30px;
+}
+
 .text-white h1,
 .text-white h2,
 .text-white h3,
@@ -2076,13 +2086,18 @@ ol {
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: baseline;
-    margin-bottom: 15px;	
+    margin-bottom: 15px;
 }
 
 .chart-calculate-form .fa-check-square {
     color: #69b31d;
+    margin-right: 20px;	
+}
+
+.chart-calculate-form .fa-clipboard-list {
+    color: #1e3d54;
     margin-right: 20px;	
 }
 
