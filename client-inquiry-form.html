@@ -30,6 +30,9 @@
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js" async></script>
+    <script src="https://unpkg.com/@botpoison/browser" async></script>
 </head>
 
 <body>
@@ -66,7 +69,7 @@
     <!-- Offcanvas Menu Section End -->
 
     <!-- Header Section Begin -->
-    <header class="header-section">
+    <header class="header-section" style="padding-top: 20px;padding-left: 0;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-3">
@@ -100,7 +103,7 @@
                     </div>
                 </div>
             </div>
-            <div class="canvas-open">
+            <div class="canvas-open" style="right: 20px;top: 30px;">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
@@ -108,66 +111,90 @@
     <!-- Header End -->
 
     <!-- Breadcrumb Section Begin -->
-    <section class="breadcrumb-section set-bg" data-setbg="img/hero/hero-1.jpg">
+<!--     <section class="breadcrumb-section set-bg" data-setbg="img/hero/hero-4.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb-text">
-                        <h2>About Me</h2>
+                        <h2>Contact Me</h2>
                         <div class="bt-option">
-                            <a href="/">Home</a> <i class="fas fa-chevron-right"></i> <span>About</span>
+                            <a href="/">Home</a> <i class="fas fa-chevron-right"></i> <span>Contact Me</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Breadcrumb Section End -->
 
-    <!-- About US Section Begin -->
-    <section class="aboutus-section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 p-0">
-                    <div class="about-video set-bg" data-setbg="img/about-me.jpg">
-                        <a href="https://www.youtube.com/watch?v=3sw4fPw60JI" class="play-btn video-popup"><i
-                                class="fa fa-caret-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-6 p-0">
-                    <div class="about-text">
-                        <div class="section-title">
-                            <h2>About Me</h2>
-                        </div>
-                        <div class="at-desc">
-                            <p>I started training at <strong>15½ years old</strong>—and, to be honest, it was because of a girl. In high school, I was awkward, struggled with acne, and had zero confidence. Lifting became my way out. It gave me structure, built my self-esteem, and completely changed how I carried myself.</p>
-                            <p>At <strong>19</strong>, I took things to the next level, competing in my first <strong>bodybuilding competition</strong> in the Teen Physique category—and walked away with a <strong>1st place trophy</strong>. That same year, I competed <strong>two more times</strong>, proving to myself what was possible with the right training and mindset.</p>
-                            <p>In <strong>2020</strong>, just <strong>one month before the pandemic</strong>, I left my job at <strong>Cal State Fullerton</strong> to become a <strong>full-time coach</strong>. Why? Because I saw the problem firsthand—people in public gyms were being <strong>charged ridiculous prices for mediocre training</strong> and getting nowhere. I knew I could offer <strong>something better</strong>.</p>
-                            <p>Fast forward <strong>5+ years in business</strong>, I’ve helped <strong>200+ professionals</strong>—including <strong>CEOs, business owners, IT specialists, pilots, law enforcement, and military personnel</strong>—get in the best shape of their lives <strong>without wasting time</strong> or feeling like fitness is taking over their life.</p>
-                            <p>My coaching is built for <strong>busy professionals</strong> who want <strong>efficient, results-driven training</strong> that fits their schedule. If you’re <strong>committed, disciplined, and willing to put in the work,</strong> you can achieve <strong>anything</strong>—and I’ll show you how.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About US Section End -->
-
-    <!-- Banner Section Begin -->
-    <section class="banner-section set-bg" data-setbg='img/banner-bg.jpg'>
+    <!-- Contact Section Begin -->
+    <section class="contact-section spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="bs-text">
-                        <h2>Limited Spots Available!</h2>
-                        <div class="bt-tips">Join Now and Transform Your Fitness Journey!</div>
-                        <a href="/contact" class="primary-btn">Apply for Coaching Today!</a>
+                <div class="col-lg-12">
+                    <div class="section-title contact-title">
+                        <h2>Client Inquiry Form</h2>
                     </div>
+                    <div class="section-title contact-title">
+                        <p>Please be as open and detailed as possible<br>
+                            Thank you for taking the time to contact me!<br>
+                            - Coach Dan
+                        </p>
+                    </div>                    
+                    <div class="leave-comment">
+                        <form id="lead" action="#">
+                            <input id="email" type="email" placeholder="What's your email? (no spam I promise)" oninvalid="this.setCustomValidity('Please Enter A Valid Email.');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="Please Enter A Valid Email." required>
+
+                            <input id="firstName" type="text" placeholder="First Name" oninvalid="this.setCustomValidity('Please Fill In Your First Name.');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="Please Fill In Your First Name."  required>
+
+                            <input id="lastName" type="text" placeholder="Last Name" oninvalid="this.setCustomValidity('Please Fill In Your Last Name.');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="Please Fill In Your Last Name."  required>
+
+                            <input id="phone" type="tel" placeholder="What is the best phone number to reach you if needed?" oninvalid="this.setCustomValidity('Please Enter A Phone Number.');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="Please Enter A Phone Number." required>
+                            
+                            <input id="age" type="number" placeholder="Age" oninvalid="this.setCustomValidity('Please Enter Your Age.');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="Please Enter Your Age." min="10" required>
+
+                            <input id="weight" type="number" placeholder="Current Weight" oninvalid="this.setCustomValidity('Please Enter Your Current Weight.');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="Please Enter Your Current Weight." min="70" required>
+
+                            <input id="height" type="text" placeholder="Height" oninvalid="this.setCustomValidity('Please Fill In Your Height.');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="Please Fill In Your Height."  required>
+
+                            <textarea id="goals" placeholder="What is your current goal? Please be specific and detailed. What physical/behavioral/mindset changes do you want to see?" oninvalid="this.setCustomValidity('What Are Your Fitness Goals?');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="What Are Your Fitness Goals?" required></textarea>
+
+                            <textarea id="hurdles" placeholder="Right now, what are your top 2-4 hurdles standing in the way of accomplishing these goals?" oninvalid="this.setCustomValidity('What Are Your Hurdles?');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="What Are Your Hurdles?" required></textarea>
+
+                            <textarea id="weightFluctuation" placeholder="Are you currently gaining, losing, or maintaining weight?" oninvalid="this.setCustomValidity('How is your weight fluctuating?');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="How is your weight fluctuating?" required></textarea>
+
+                            <textarea id="homeLife" placeholder="What’s your home life like? Married or single? Kids/no kids? Does your household’s behavior line up with your goals?" oninvalid="this.setCustomValidity('What’s your home life like?');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="What’s your home life like?" required></textarea>
+
+                            <textarea id="serious" placeholder="Are you serious about committing time & finances toward achieving these goals?" oninvalid="this.setCustomValidity('Are you serious?');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="Are you serious?" required></textarea>
+
+                            <input id="importance" type="number" placeholder="On a scale of 1-10, how important is achieving these goals to you?" oninvalid="this.setCustomValidity('Please Enter Your Current Weight.');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="Please Enter Your Current Weight." min="1" max="10" required>
+
+                            <textarea id="occupation" placeholder="What do you do for a living? How does your work life affect your fitness goals?" oninvalid="this.setCustomValidity('What do you do for a living?');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="What do you do for a living?" required></textarea>
+
+                            <input id="referral" type="text" placeholder="How did you hear about this coaching program? If you were referred, please let me know who referred you." oninvalid="this.setCustomValidity('How did you hear about this coaching program?');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="How did you hear about this coaching program?"  required>                            
+
+                            <button id="submit" type="submit">Submit</button>
+                            <div class="submitting"></div>
+                        </form>
+                    </div>
+
+                    <div class="success">
+                        <h3><span class="firstName"></span>, thank you for contacting me. I am thrilled to have you on board and look forward to helping you achieve your fitness goals.
+                        <br><br>
+                        I will get back to you shortly with the next steps. If you have any questions in the meantime, please call/text <a href="tel:7143967178">(714) 396-7178</a> or email <a href="mailto:contact@trainwithdanww.com">contact@trainwithdanww.com</a>.</h3>
+                    </div>
+
+                    <div class="failure">
+                        <h3><span class="firstName"></span>, there was an issue with your recent form submission. Unfortunately, it didn't go through successfully.
+                        <br><br>
+                        I apologize for any inconvenience this may have caused. Please try submitting the form again, or feel free to reach out to me directly: <a href="tel:7143967178">(714) 396-7178</a> or email <a href="mailto:contact@trainwithdanww.com">contact@trainwithdanww.com</a>, so I can assist you promptly.
+                        </h3>
+                    </div>                    
                 </div>
             </div>
         </div>
     </section>
-    <!-- Banner Section End -->
+    <!-- Contact Section End -->
 
 <!-- Get In Touch Section Begin -->
     <div class="gettouch-section">
@@ -177,7 +204,7 @@
                     <div class="gt-text">
                         <i class="fas fa-map-marker-alt"></i>
                         <p><a href='https://www.google.com/maps/dir//1900+N+Tustin+St,+Orange,+CA+92865/@33.8198478,-117.9191174,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x80dcd735e0e573d3:0x65fa63567dcf0cbf!2m2!1d-117.8367162!2d33.8198752?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D' target="_blank">
-                            1900 N Tustin St,<br> Orange, CA 92865                            
+                            1900 N Tustin St,<br> Orange, CA 92865
                         </a></p>
                     </div>
                 </div>
@@ -270,9 +297,6 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-
-
-
 </body>
 
 </html>
