@@ -180,6 +180,7 @@
         const firstName = document.getElementById('firstName').value;
         const lastName = document.getElementById('lastName').value;
         const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
         const age = document.getElementById('age').value;
         const goals = document.getElementById('goals').value;
 
@@ -192,6 +193,7 @@
             first_name: firstName,
             last_name: lastName,
             email: email,
+            phone: phone,
             age: age,
             goals: goals,
             _botpoison: solution,
