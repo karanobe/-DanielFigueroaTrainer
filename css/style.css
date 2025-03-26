@@ -3364,6 +3364,12 @@ ol {
 	.search-model-form input {
 		font-size: 28px;
 	}
+	.home-banner {
+		background-position-x: -300px;	
+	}	
+	.services-banner {
+		background-position-x: -300px;	
+	}		
 }
 
 .hidden {display: none !important;}
@@ -3401,3 +3407,4 @@ ol {
     display: none;
 }
 @keyframes l3 {to{transform: rotate(1turn)}}
+
